@@ -142,7 +142,7 @@ class Ejemplo extends BaseController
                 return 
                     view('common-lectura/head') .
                     view('common-lectura/menu') .
-                    view('ejemplo/buscarl',$data) .
+                    view('common-lectura/buscarlj',$data) .
                     view('common-lectura/footer');
             }
 

@@ -149,7 +149,7 @@ class Palabra extends BaseController
                 return 
                     view('common-lectura/head') .
                     view('common-lectura/menu') .
-                    view('palabra/buscarl',$data) .
+                    view('common-lectura/buscarl',$data) .
                     view('common-lectura/footer');
             }
 
