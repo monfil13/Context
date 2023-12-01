@@ -13,9 +13,10 @@ class Palabra extends BaseController
     }
 
     public function mostrar(){
-        $palabraModel = model('PalabraModel');
-        $data['palabras'] = $palabraModel->findAll();
-        $data['totalPalabras'] = $palabraModel->countAll();
+        $PalabraModel = model('PalabraModel');        
+        $data['palabras'] = $PalabraModel->findAll();
+        $data['totalPalabras'] = $PalabraModel->countAll();
+
   
        return 
         view('common/head') .
@@ -26,8 +27,8 @@ class Palabra extends BaseController
 
     public function agregar(){
         helper(['form','url']);
-        $palabraModel = model('palabraModel');
-        $data['palabra'] = $palabraModel->findAll();
+        $PalabraModel = model('PalabraModel');
+        $data['palabra'] = $PalabraModel->findAll();
 
         $validation =  \Config\Services::validation();
         
@@ -59,7 +60,7 @@ class Palabra extends BaseController
     }
 
     public function insert(){
-        $palabraModel = model('PalabraModel');
+        $PalabraModel = model('PalabraModel');
 
         $data = [
             
@@ -67,19 +68,19 @@ class Palabra extends BaseController
             "descripcion" => $_POST['descripcion'],
    "tipo" => $_POST['tipo']
         ];
-        $palabraModel->insert($data, false);
+        $PalabraModel->insert($data, false);
         return redirect('palabra/mostrar','refresh');
     }
 
     public function delete($idPalabra){
-        $palabraModel = model('PalabraModel');
-        $palabraModel->delete($idPalabra);
+        $PalabraModel = model('PalabraModel');
+        $PalabraModel->delete($idPalabra);
         return redirect('palabra/mostrar','refresh');
     }
 
     public function editar($idPalabra){
-        $palabraModel = model('PalabraModel');
-        $data['palabra'] = $palabraModel->find($idPalabra);
+        $PalabraModel = model('PalabraModel');
+        $data['palabra'] = $PalabraModel->find($idPalabra);
 
         return 
         view('common/head') .
@@ -89,25 +90,25 @@ class Palabra extends BaseController
     }
 
     public function update(){
-        $palabraModel = model('PalabraModel');
+        $PalabraModel = model('PalabraModel');
         $data = [
             "nombrePalabra" => $_POST['nombrePalabra'],
             "descripcion" => $_POST['descripcion'],
             "tipo" => $_POST['tipo']
         ];
-        $palabraModel->update($_POST['idPalabra'],$data);
+        $PalabraModel->update($_POST['idPalabra'],$data);
         return redirect('palabra/mostrar','refresh');
     }
 
     public function buscar(){    
 
-        $palabraModel = model('PalabraModel');
+        $PalabraModel = model('PalabraModel');
 
             if(isset($_GET['nombrePalabra'])){   
                 $nombrePalabra= $_GET['nombrePalabra'];  
                 $descripcion = $_GET['descripcion'];  
                 $tipo = $_GET['tipo']; 
-                $data['palabras']= $palabraModel
+                $data['palabras']= $PalabraModel
 
                                     ->like('nombrePalabra',$nombrePalabra)
                                     ->like('descripcion',$descripcion)
@@ -116,7 +117,7 @@ class Palabra extends BaseController
             }
             else{
                 $nombrePalabra = "";
-                $data['palabras']=$palabraModel->findAll();
+                $data['palabras']=$PalabraModel->findAll();
             }
     
             return 
@@ -125,32 +126,5 @@ class Palabra extends BaseController
                 view('palabra/buscar',$data) .
                 view('common/footer');
         }
-
-        public function buscarl(){    
-
-            $palabraModel = model('PalabraModel');
-    
-                if(isset($_GET['nombrePalabra'])){   
-                    $nombrePalabra= $_GET['nombrePalabra'];  
-                    $descripcion = $_GET['descripcion'];  
-                    $tipo = $_GET['tipo']; 
-                    $data['palabras']= $palabraModel
-    
-                                        ->like('nombrePalabra',$nombrePalabra)
-                                        ->like('descripcion',$descripcion)
-                                        ->like('tipo',$tipo)             
-                                        ->findAll();
-                }
-                else{
-                    $nombrePalabra = "";
-                    $data['palabras']=$palabraModel->findAll();
-                }
-        
-                return 
-                    view('common-lectura/head') .
-                    view('common-lectura/menu') .
-                    view('common-lectura/buscarl',$data) .
-                    view('common-lectura/footer');
-            }
 
     }

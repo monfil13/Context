@@ -1,15 +1,49 @@
 <?php
 
+namespace Config;
+
+use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Router\RouteCollection;
 
-/**
- * @var RouteCollection $routes
- */
-$routes->get('/', 'Home::index');
-$routes->post('/welcome_message', 'Home::welcome_message');
-$routes->get('/inicio', 'Home::inicio');
+class Routes extends BaseConfig
+{
+    // ...
 
-$routes->post('/', 'Home::inicio');
+    public $routes = [
+        '/palabra' => 'palabra::index',
+        '/palabra/mostrar'=> 'palabra::mostrar',
+        '/palabra/agregar'=> 'palabra::agregar',
+        '/palabra/buscar'=> 'palabra::buscar',
+        '/palabra/editar/(:num)' =>'palabra::editar/$1',
+        '/palabra/delete/(:num)'=> 'palabra::delete/$1',
+        '/palabra/editar'=> 'palabra::editar',
+        '/palabra/delete'=> 'palabra::delete',
+        
+        '/palabra/insert'=> 'palabra::insert',
+        '/palabra/update'=> 'palabra::update',
+
+        '/ejemplo'=>  'ejemplo::index',
+        '/ejemplo/mostrar'=>  'ejemplo::mostrar',
+        '/ejemplo/agregar'=>  'ejemplo::agregar',
+        '/ejemplo/buscar'=>  'ejemplo::buscar',
+        '/ejemplo/editar/(:num)'=>  'ejemplo::editar/$1',
+        '/ejemplo/delete/(:num)'=>  'ejemplo::delete/$1',
+        '/ejemplo/editar'=>  'ejemplo::editar',
+        '/ejemplo/delete'=>  'ejemplo::delete',
+
+        '/ejemplo/insert'=>  'ejemplo::insert',
+        '/ejemplo/update'=>  'ejemplo::update'
+    ];
+
+}
+
+
+$routes->get('/', 'Home::index');
+$routes->get('/login', 'Home::login');
+$routes->get('/inicio', 'Home::inicio');
+$routes->get('/salir', 'Home::salir');
+
+$routes->post('/login', 'Home::login');
 
 //Rutas de Palabras
 $routes->get('/palabra', 'palabra::index');
@@ -25,7 +59,7 @@ $routes->post('/palabra/insert', 'palabra::insert');
 $routes->post('/palabra/update', 'palabra::update');
 
 //Rutas de Palabras (Búsqueda de Lectura)
-$routes->get('/palabra/buscarl', 'palabra::buscarl');
+$routes->get('/common-lectura/buscarl', 'palabralec::buscarl');
 
 
 //Rutas de Ejemplos
@@ -42,4 +76,8 @@ $routes->post('/ejemplo/insert', 'ejemplo::insert');
 $routes->post('/ejemplo/update', 'ejemplo::update');
 
 //Rutas de Ejemplos (Búsqueda de Lectura)
-$routes->get('/ejemplo/buscarl', 'ejemplo::buscarl');
+$routes->get('/common-lectura/buscarlj', 'ejemplolec::buscarlj');
+
+
+
+

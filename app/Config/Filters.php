@@ -23,6 +23,8 @@ class Filters extends BaseConfig
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
+        'SesionAdmin'   => \App\Filters\SesionAdmin::class,
+        'Auth'          => \App\Filters\AuthFilter::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
     ];
@@ -60,12 +62,65 @@ class Filters extends BaseConfig
      */
     public array $methods = [];
 
-    /**
-     * List of filter aliases that should run on any
-     * before or after URI patterns.
-     *
-     * Example:
-     * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
-     */
-    public array $filters = [];
+    public $filters = [
+        'auth' => ['before' => 
+        ['/palabra/index',    
+        "/palabra/mostrar",        
+        '/palabra/agregar', 
+        '/palabra/buscar', 
+        '/palabra/editar/(:num)', 
+        '/palabra/delete/(:num)', 
+        '/palabra/editar', 
+        '/palabra/delete', 
+        '/palabra/insert', 
+        '/palabra/update',
+        '/ejemplo/index', 
+        '/ejemplo/mostrar', 
+        '/ejemplo/agregar', 
+        '/ejemplo/buscar', 
+        '/ejemplo/editar/(:num)', 
+        '/ejemplo/delete/(:num)', 
+        '/ejemplo/editar', 
+        '/ejemplo/delete', 
+        
+        '/ejemplo/insert', 
+        '/ejemplo/update']],
+
+
+        
+        "SesionAdmin" =>[
+            "before "=> [
+               
+         //Rutas de Palabras
+        '/palabra/index',    
+        "/palabra/mostrar",        
+        '/palabra/agregar', 
+        '/palabra/buscar', 
+        '/palabra/editar/(:num)', 
+        '/palabra/delete/(:num)', 
+        '/palabra/editar', 
+        '/palabra/delete', 
+        
+        '/palabra/insert', 
+        '/palabra/update', 
+        
+        //Rutas de Ejemplos
+        '/ejemplo/index', 
+        '/ejemplo/mostrar', 
+        '/ejemplo/agregar', 
+        '/ejemplo/buscar', 
+        '/ejemplo/editar/(:num)', 
+        '/ejemplo/delete/(:num)', 
+        '/ejemplo/editar', 
+        '/ejemplo/delete', 
+        
+        '/ejemplo/insert', 
+        '/ejemplo/update'
+            ]
+        ]
+
+    ];
+
+
 }
+

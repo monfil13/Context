@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <form action="<?=base_url('index.php/palabra/buscar/'); ?>" method="GET">
+            <form action="<?=base_url('index.php/common-lectura/buscarl/'); ?>" method="GET">
 
                 <label for="nombrePalabra">Nombre de Palabra</label>
                 <input type="text" class="form-control" name="nombrePalabra">

@@ -14,15 +14,15 @@
 
 <div class="container" align="center">
     <h1>Login de "El Context"</h1>
-    <img src="con.jpeg" alt="" class="img-fluid" style="width: 420px; height: 320px;">
+    <img src="cont.jpg" alt="" class="img-fluid" style="width: 420px; height: 320px;">
     <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
-<form action="<?php echo base_url('/welcome_message')?>" method="POST">
+<form action="<?php echo base_url('/login')?>" method="POST">
 <label for="usuario">Usuario</label>
-<input type="text" name="usuario" class="form-control">
+<input type="text" name="usuario" class="form-control" required="">
 <label for="password">Contraseña</label>
-<input type="password" name="password"class="form-control">
+<input type="password" name="password"class="form-control" required ="">
 <br>
 <button class="btn btn-primary">Acceder</button>
 </br>

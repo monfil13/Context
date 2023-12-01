@@ -15,7 +15,7 @@
                         <th colspan="2">Acciones</th>
                     </thead>
                     <tbody>
-                        <?php foreach ($palabras as $key ) : ?>
+                        <?php foreach ($palabras as $key) : ?>
                         <tr>
                             <td><?php echo $key->nombrePalabra?></td>
                             <td><?php echo $key->descripcion?></td>

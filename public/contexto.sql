@@ -11,6 +11,8 @@ tipo enum('sustantivo','adjetivo', 'verbo', 'pronombre','adverbio','preposicion'
 `deleted_at` datetime NOT NULL
 );
 
+select * from palabra;
+
 create table ejemplo(
 idEjemplo int primary key auto_increment not null,
 ingles varchar(500) not null,
@@ -20,4 +22,8 @@ español varchar (500) not null,
 `deleted_at` datetime NOT NULL
 );
 
-select * from palabra;
+create table t_usuario(
+idUsuario int (5)primary key auto_increment not null,
+usuario varchar (255) not null,
+`password` varchar (255) not null,
+tipo varchar (255) not null);

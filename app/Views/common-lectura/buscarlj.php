@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <form action="<?=base_url('index.php/ejemplo/buscar/'); ?>" method="GET">
+            <form action="<?=base_url('index.php/common-lectura/buscarlj/'); ?>" method="GET">
 
                 <label for="ingles">Ejemplo en Inglés</label>
                 <input type="text" class="form-control" name="ingles">
