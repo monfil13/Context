@@ -24,7 +24,7 @@ class Filters extends BaseConfig
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
         'SesionAdmin'   => \App\Filters\SesionAdmin::class,
-        'Auth'          => \App\Filters\AuthFilter::class,
+        'Auth'          => \App\Filters\Auth::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
     ];
@@ -62,8 +62,8 @@ class Filters extends BaseConfig
      */
     public array $methods = [];
 
-    public $filters = [
-        'auth' => ['before' => 
+    private array  $filters = [
+        'Auth' => ['before' => 
         ['/palabra/index',    
         "/palabra/mostrar",        
         '/palabra/agregar', 

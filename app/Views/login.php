@@ -12,9 +12,85 @@
   </head>
   <body>
 
+
+  <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Context</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importamos la librería de Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  /* styles.css */
+
+/* Estilos generales para la barra de navegación */
+nav {
+    background-color: #87CEEB; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    padding: 10px; /* Relleno interno de 10px */
+}
+
+/* Estilos para los elementos de la barra de navegación */
+nav a {
+    color: #fff; /* Color de enlaces blanco */
+    margin: 0 10px; /* Márgenes entre enlaces */
+    text-decoration: none; /* Elimina subrayado en enlaces */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón sobre enlaces */
+}
+  </style>
+</head>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sección de Búsqueda (Sólo Lectura)</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Palabras
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="<?=base_url('index.php/common-lectura/buscarl'); ?>">Buscar</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Ejemplos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="<?=base_url('index.php/common-lectura/buscarlj'); ?>">Buscar</a></li>
+            </ul>
+        </li>
+        <ul class="dropdown-menu">
+          </ul> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
 <div class="container" align="center">
     <h1>Login de "El Context"</h1>
-    <img src="cont.jpg" alt="" class="img-fluid" style="width: 420px; height: 320px;">
+    <img src="cont.jpeg" alt="" class="img-fluid" style="width: 380px; height: 300px;">
     <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4">

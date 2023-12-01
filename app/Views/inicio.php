@@ -33,10 +33,13 @@
         <nav class="navbar navbar-inverse">
           <ul class="nav navbar-nav">
            <li <?php if(basename($_SERVER['PHP_SELF']) == "#") echo "class='active'"; ?>><a href="#"><i class="glyphicon glyphicon-home"></i> Te damos la bienvenida...</a></li>
-                       <li <?php if(basename($_SERVER['PHP_SELF']) == "common-lectura/buscarl") echo "class='active'"; ?>><a href="/login"><i class="glyphicon glyphicon-user"></i>Palabras</a></li>
-            <li <?php if(basename($_SERVER['PHP_SELF']) == "common-lectura/buscarlj") echo "class='active'"; ?>><a href="common-lectura/buscarl"><i class="glyphicon glyphicon-book"></i>Ejemplos</a></li>
+                       <li <?php if(basename($_SERVER['PHP_SELF']) == "palabra/mostrar") echo "class='active'"; ?>><a href="/login"><i class="glyphicon glyphicon-pencil"></i>Palabras</a></li>
+            <li <?php if(basename($_SERVER['PHP_SELF']) == "ejemplo/mostrar") echo "class='active'"; ?>><a href="ejemplo/mostrar"><i class="glyphicon glyphicon-book"></i>Ejemplos</a></li>
+           
           </ul>
-
+ <ul class="nav navbar-nav navbar-right">
+            <li><a href="/"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
+          </ul> 
           </nav>
   <div class="container">
     <h1>Bienvenido al Context!</h1>
@@ -46,13 +49,13 @@
   <div class="splide__track">
     <ul class="splide__list">
       <i class="splide__slide">
-        <a href="common-lectura/buscarl" class="btn btn-primary">
+        <a href="palabra/mostrar" class="btn btn-primary">
           <img src="con2.jpeg" alt="" class="img-fluid" style="width: 320px; height: 220px;">
           <br>Palabras</br>
         </a>
       </i>
       <i class="splide__slide">
-        <a href="common-lectura/buscarlj" class="btn btn-primary">
+        <a href="ejemplo/mostrar" class="btn btn-primary">
         <img src="con3.jpeg" alt="" class="img-fluid" style="width: 320px; height: 220px;">
         <br>Ejemplos</br>
         </a>

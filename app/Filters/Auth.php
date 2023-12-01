@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Config\Services;
 
-class AuthFilter implements FilterInterface
+class Auth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
