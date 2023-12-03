@@ -23,7 +23,7 @@ class Filters extends BaseConfig
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
-        'SesionAdmin'   => \App\Filters\SesionAdmin::class,
+        'MyFilter'   => \App\Filters\MyFilter::class,
         'Auth'          => \App\Filters\Auth::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
@@ -62,7 +62,7 @@ class Filters extends BaseConfig
      */
     public array $methods = [];
 
-    private array  $filters = [
+   /* public array  $filters = [
         'Auth' => ['before' => 
         ['/palabra/index',    
         "/palabra/mostrar",        
@@ -88,7 +88,7 @@ class Filters extends BaseConfig
 
 
         
-        "SesionAdmin" =>[
+        "Sesion" =>[
             "before "=> [
                
          //Rutas de Palabras
@@ -121,6 +121,36 @@ class Filters extends BaseConfig
 
     ];
 
+*/
+
+
+public $filters = [
+
+    "MyFilter" =>
+
+            ['before' => 
+            ['/palabra/index',    
+            "/palabra/mostrar",        
+            '/palabra/agregar', 
+            '/palabra/buscar', 
+            '/palabra/editar/(:num)', 
+            '/palabra/delete/(:num)', 
+            '/palabra/editar', 
+            '/palabra/delete', 
+            '/palabra/insert', 
+            '/palabra/update',
+            '/ejemplo/index', 
+            '/ejemplo/mostrar', 
+            '/ejemplo/agregar', 
+            '/ejemplo/buscar', 
+            '/ejemplo/editar/(:num)', 
+            '/ejemplo/delete/(:num)', 
+            '/ejemplo/editar', 
+            '/ejemplo/delete', 
+            
+            '/ejemplo/insert', 
+            '/ejemplo/update']]
+
+];
 
 }
-
