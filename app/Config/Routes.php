@@ -58,6 +58,7 @@ $routes->get('/palabra/delete', 'palabra::delete');
 $routes->post('/palabra/insert', 'palabra::insert');
 $routes->post('/palabra/update', 'palabra::update');
 
+
 //Rutas de Palabras (Búsqueda de Lectura)
 $routes->get('/common-lectura/buscarl', 'palabralec::buscarl');
 

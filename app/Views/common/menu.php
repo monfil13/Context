@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <a class="navbar-brand" href="#"><li class="fas fa-user"> </li><?php echo session("usuario");?></a>  
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       
@@ -19,7 +19,7 @@
             <li><a class="dropdown-item" href="<?=base_url('index.php/palabra/buscar'); ?>">Buscar</a></li>
             </ul>
         </li>
-
+        <li class="fas fa-book"> </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Ejemplos

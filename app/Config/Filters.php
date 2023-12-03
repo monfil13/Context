@@ -127,9 +127,9 @@ class Filters extends BaseConfig
 public $filters = [
 
     "MyFilter" =>
-
             ['before' => 
-            ['/palabra/index',    
+            ['/palabra/index',
+            '/inicio',    
             "/palabra/mostrar",        
             '/palabra/agregar', 
             '/palabra/buscar', 
@@ -150,7 +150,6 @@ public $filters = [
             
             '/ejemplo/insert', 
             '/ejemplo/update']]
-
 ];
 
 }

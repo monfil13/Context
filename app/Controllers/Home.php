@@ -20,15 +20,13 @@ public function login(){
         "usuario" => $datosUsuario[0]["usuario"],
         "tipo" => $datosUsuario[0]["tipo"],
         ];
-        
-        
             $session = session();
             $session->set($data);
             return redirect()->to(base_url('/inicio'))->with('mensaje', '1');
 
 
         } else {
-            return redirect()->to(base_url('/login'))->with('mensaje', '0');
+            return redirect()->to(base_url('/'))->with('mensaje', '0');
         }
 
 }

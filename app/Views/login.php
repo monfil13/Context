@@ -11,8 +11,13 @@
     <title>Login</title>
   </head>
   <body>
-
-
+  <style>
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #3498db; /* Color azul */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
   <!doctype html>
 <html lang="en">
   <head>
@@ -33,14 +38,14 @@
 
 /* Estilos generales para la barra de navegación */
 nav {
-    background-color: #87CEEB; /* Color de fondo azul */
-    color: #fff; /* Color de texto blanco */
+    background-color: #caacf9; /* Color de fondo azul */
+    color: #caacf9; /* Color de texto blanco */
     padding: 10px; /* Relleno interno de 10px */
 }
 
 /* Estilos para los elementos de la barra de navegación */
 nav a {
-    color: #fff; /* Color de enlaces blanco */
+    color: #caacf9; /* Color de enlaces blanco */
     margin: 0 10px; /* Márgenes entre enlaces */
     text-decoration: none; /* Elimina subrayado en enlaces */
 }
@@ -95,14 +100,15 @@ nav a:hover {
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
 <form action="<?php echo base_url('/login')?>" method="POST">
+
 <label for="usuario">Usuario</label>
 <input type="text" name="usuario" class="form-control" required="">
 <label for="password">Contraseña</label>
 <input type="password" name="password"class="form-control" required ="">
 <br>
+
 <button class="btn btn-primary">Acceder</button>
 </br>
-
 </form>
         </div>
 
