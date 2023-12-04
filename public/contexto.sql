@@ -11,7 +11,7 @@ tipo enum('sustantivo','adjetivo', 'verbo', 'pronombre','adverbio','preposicion'
 `deleted_at` datetime NOT NULL
 );
 
-select * from palabra;
+select * from t_usuario;
 
 create table ejemplo(
 idEjemplo int primary key auto_increment not null,

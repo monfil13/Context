@@ -42,7 +42,7 @@
     <center>
         <nav class="navbar navbar-inverse">
           <ul class="nav navbar-nav">
-           <li <?php if(basename($_SERVER['PHP_SELF']) == "#") echo "class='active'"; ?>><a href="#"><i class="glyphicon glyphicon-home"> </i><?php echo session("usuario");?>: te damos la bienvenida! <i class="fas fa-smile"></i></a></li>
+           <li <?php if(basename($_SERVER['PHP_SELF']) == "#") echo "class='active'"; ?>><a class="text"><i class="glyphicon glyphicon-home"> </i><?php echo session("usuario");?>: te damos la bienvenida! <i class="fas fa-smile"></i></a></li>
             <li <?php if(basename($_SERVER['PHP_SELF']) == "palabra/mostrar") echo "class='active'"; ?>><a href="/palabra/mostrar"><i class="glyphicon glyphicon-pencil"></i>Palabras<i class="glyphicon glyphicon-pencil"></i></a></li>
             <li <?php if(basename($_SERVER['PHP_SELF']) == "ejemplo/mostrar") echo "class='active'"; ?>><a href="ejemplo/mostrar"><i class="glyphicon glyphicon-book"></i>Ejemplos<i class="glyphicon glyphicon-book"></i></a></li>
            
