@@ -28,7 +28,7 @@ class TUsuarios extends Migration
                 'constraint' => '255',
             ],
         ]);
-        $this->forge->addKey('ldUsuario', true);
+        $this->forge->addKey('idUsuario', true);
         $this->forge->createTable('t_usuario');
     }
 

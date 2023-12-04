@@ -32,5 +32,4 @@ class EjemploLec extends BaseController
                     view('common-lectura/buscarlj',$data) .
                     view('common-lectura/footer');
             }
-
     }

@@ -44,88 +44,13 @@ class Filters extends BaseConfig
         ],
         'after' => [
             'toolbar',
-            // 'honeypot',
-            // 'secureheaders',
         ],
     ];
 
-    /**
-     * List of filter aliases that works on a
-     * particular HTTP method (GET, POST, etc.).
-     *
-     * Example:
-     * 'post' => ['foo', 'bar']
-     *
-     * If you use this, you should disable auto-routing because auto-routing
-     * permits any HTTP method to access a controller. Accessing the controller
-     * with a method you don't expect could bypass the filter.
-     */
+
     public array $methods = [];
-
-   /* public array  $filters = [
-        'Auth' => ['before' => 
-        ['/palabra/index',    
-        "/palabra/mostrar",        
-        '/palabra/agregar', 
-        '/palabra/buscar', 
-        '/palabra/editar/(:num)', 
-        '/palabra/delete/(:num)', 
-        '/palabra/editar', 
-        '/palabra/delete', 
-        '/palabra/insert', 
-        '/palabra/update',
-        '/ejemplo/index', 
-        '/ejemplo/mostrar', 
-        '/ejemplo/agregar', 
-        '/ejemplo/buscar', 
-        '/ejemplo/editar/(:num)', 
-        '/ejemplo/delete/(:num)', 
-        '/ejemplo/editar', 
-        '/ejemplo/delete', 
-        
-        '/ejemplo/insert', 
-        '/ejemplo/update']],
-
-
-        
-        "Sesion" =>[
-            "before "=> [
-               
-         //Rutas de Palabras
-        '/palabra/index',    
-        "/palabra/mostrar",        
-        '/palabra/agregar', 
-        '/palabra/buscar', 
-        '/palabra/editar/(:num)', 
-        '/palabra/delete/(:num)', 
-        '/palabra/editar', 
-        '/palabra/delete', 
-        
-        '/palabra/insert', 
-        '/palabra/update', 
-        
-        //Rutas de Ejemplos
-        '/ejemplo/index', 
-        '/ejemplo/mostrar', 
-        '/ejemplo/agregar', 
-        '/ejemplo/buscar', 
-        '/ejemplo/editar/(:num)', 
-        '/ejemplo/delete/(:num)', 
-        '/ejemplo/editar', 
-        '/ejemplo/delete', 
-        
-        '/ejemplo/insert', 
-        '/ejemplo/update'
-            ]
-        ]
-
-    ];
-
-*/
-
-
-public $filters = [
-
+    
+    public $filters = [
     "MyFilter" =>
             ['before' => 
             ['/palabra/index',

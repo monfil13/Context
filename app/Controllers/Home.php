@@ -24,7 +24,6 @@ public function login(){
             $session->set($data);
             return redirect()->to(base_url('/inicio'))->with('mensaje', '1');
 
-
         } else {
             return redirect()->to(base_url('/'))->with('mensaje', '0');
         }
