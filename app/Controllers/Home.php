@@ -8,7 +8,7 @@ public function index(){
 }
 
 public function login(){
-
+/*Condiciones para iniciar sesión*/
     $usuario= $this->request->getPost('usuario');
     $password= $this->request->getPost('password');
     $Usuario = new Usuarios();
@@ -35,6 +35,7 @@ public function inicio(){
 }
 
 public function salir(){
+    /*Condiciones para cerrar sesión y redirigir al login*/
     $session= session();
     $session->destroy();
     return redirect()->to(base_url('/'));

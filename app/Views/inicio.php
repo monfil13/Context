@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
-      background-color: #98c0f6; /* Utilizamos un color de fondo gris claro */
+      background-color: #98c0f6; /* Utilizamos un color de fondo azul con los botones color morado claro */
     }
     .navbar-inverse .active {
         background-color: #ffca99;
@@ -37,6 +37,7 @@
   </style>
 </head>
 
+<!-- Barra de navegación superior -->
 
 <body>
     <center>
@@ -52,6 +53,7 @@
           </a></li>
           </ul> 
           </nav>
+<!-- Imagen o menú central de la página -->
   <div class="container">
     <h1>Bienvenido al Context!</h1>
     <h3>¿Qué deseas visualizar?</h3>

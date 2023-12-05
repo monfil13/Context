@@ -23,6 +23,7 @@ class Filters extends BaseConfig
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
+        //Filtro para autenticación del administrador
         'MyFilter'   => \App\Filters\MyFilter::class,
         'Auth'          => \App\Filters\Auth::class,
         'invalidchars'  => InvalidChars::class,
@@ -50,6 +51,7 @@ class Filters extends BaseConfig
 
     public array $methods = [];
     
+    //Protección de Rutas
     public $filters = [
     "MyFilter" =>
             ['before' => 

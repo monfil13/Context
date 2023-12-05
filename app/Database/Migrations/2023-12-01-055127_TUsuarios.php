@@ -6,6 +6,7 @@ use CodeIgniter\Database\Migration;
 
 class TUsuarios extends Migration
 {
+    /*Condiciones y atributos para la migración de usuario a la base de datos que permita la autenticación*/
     public function up()
     {
         $this->forge->addField([
