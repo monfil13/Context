@@ -13,7 +13,7 @@ class PalabraModel extends Model
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['idEjemplo', 'ingles', 'español'];
+    protected $allowedFields    = ['idEjemplo', 'idPalabra', 'ingles', 'español'];
 
     // Dates
     protected $useTimestamps = true;

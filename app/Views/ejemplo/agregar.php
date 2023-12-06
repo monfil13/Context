@@ -5,6 +5,15 @@
             <form action="<?= base_url('ejemplo/insert'); ?>" method="POST">
             <?= csrf_field() ?>
 
+            <div class="mb-3">
+                <label for="idPalabra">Palabra</label>
+                <select name="idPalabra" class="form-control">
+                        <?php foreach($palabras as $palabra) : ?>
+                            <option value="<?=$palabra->idPalabra ?>"><?=$palabra->nombrePalabra ?></option>
+                        <?php endforeach ?>
+                    </select>
+                </div>
+
                 <div class="mb-3">
                     <label for="ingles" class="form-label">Ejemplo en Inglés</label>
                     <input type="text" class="form-control" name="ingles" id="ingles">

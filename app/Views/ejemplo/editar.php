@@ -4,7 +4,7 @@
             <h2>Editar Ejemplo</h2>
             <form action="<?= base_url('ejemplo/update'); ?>" method="POST">
             <?= csrf_field() ?>
-            <input type="hidden" name ="idejemplo" value="<?= $ejemplo->idEjemplo ?>" />
+            <input type="hidden" name ="idEjemplo" value="<?= $ejemplo->idEjemplo ?>" />
 
             <div class="mb-3">
                     <label for="ingles" class="form-label">Ejemplo en Inglés</label>

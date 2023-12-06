@@ -8,7 +8,7 @@
             <div class="col-12">
                 <table class="table  table-bordered table-striped table-sm" style="font-size:10pt">
                     <thead>
-                        
+                        <th>Id de Palabra</th>
                         <th>Ejemplo en Inglés</th>
                         <th>Traducción</th>
                         <th colspan="2">Acciones</th>
@@ -16,6 +16,7 @@
                     <tbody>
                         <?php foreach ($ejemplos as $key ) : ?>
                         <tr>
+                            <td><?=$key->idPalabra ?></td>
                             <td><?php echo $key->ingles?></td>
                             <td><?php echo $key->español?></td>
                             <td>

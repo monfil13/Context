@@ -26,8 +26,10 @@ class Ejemplo extends BaseController
 
     public function agregar(){
         helper(['form','url']);
-        $EjemploModel = model('EjemploModel');
-        $data['ejemplo'] = $EjemploModel->findAll();
+        $palabraModel = model('PalabraModel');
+
+        $data['palabras'] = $palabraModel->findAll();
+
 
         $validation =  \Config\Services::validation();
         
@@ -48,20 +50,13 @@ class Ejemplo extends BaseController
         view('ejemplo/agregar',$data,['validation' => $validation]) .
         view('common/footer');
         }
-
-        // If you want to get the validated data.
-        //$validData = $this->validator->getValidated();
-       /* return 
-        view('common/head') .
-        view('common/menu') .
-        view('alumno/agregar') .
-        view('common/footer');*/
     }
 
     public function insert(){
         $EjemploModel = model('EjemploModel');
 
         $data = [
+            "idPalabra" => $_POST['idPalabra'],
             "ingles" => $_POST['ingles'],
             "español" => $_POST['español']
         ];
@@ -92,7 +87,7 @@ class Ejemplo extends BaseController
             "ingles" => $_POST['ingles'],
             "español" => $_POST['español']
         ];
-        $EjemploModel->update($_POST['idEjemplo'],$data);
+        $EjemploModel->update($_POST['idejemplo'],$data);
         return redirect('ejemplo/mostrar','refresh');
     }
 
